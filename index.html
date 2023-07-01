@@ -9,13 +9,23 @@
 		<title>Muhammad Usman</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/main.css?v=1" />
+		<link rel="stylesheet" href="assets/css/custom.css" />
 	</head>
 	<body class="is-preload">
 
 		<!-- Nav -->
-		<div w3-include-html="nav.html"></div>
-
+			<nav id="nav">
+				<ul class="container">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="project.html">Projects</a></li>
+					<!-- <li><a href="#top">Top</a></li>
+					<li><a href="#work">Work</a></li>
+					<li><a href="#portfolio">Portfolio</a></li>
+					<li><a href="#contact">Contact</a></li> -->
+				</ul>
+			</nav>
 
 		<!-- Home -->
 			<article id="top" class="wrapper style1">
@@ -28,9 +38,17 @@
 						
 						<div class="col-8 col-7-large col-12-medium">
 							<header>
-								<h1>Hi. I'm <strong>Muhammad Usman</strong>.</h1>
+								<!-- <h1>Hi. I'm <strong>Muhammad Usman</strong>.</h1> -->
+								<h1><strong>Muhammad Usman</strong></h1>
 							</header>
-							<p>And this is <strong>Miniport</strong>, a free, fully responsive HTML5 site template designed by <a href="http://twitter.com/ajlkn">AJ</a> for <a href="http://html5up.net">HTML5 UP</a> &amp; released under the <a href="http://html5up.net/license">CCA license</a>.</p>
+							<p class="mar-bot">Data Science, Machine Learning & Software Development Devotee</p>
+							<ul class="social mar-bot-m">
+								<li><a target="_blank" href="https://www.linkedin.com/in/its-musman/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+								<li><a target="_blank" href="https://github.com/usman61" class="icon brands fa-github"><span class="label">Github</span></a></li>
+                                <li><a target="_blank" href="https://twitter.com/usman8743" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a target="_blank" href="https://www.youtube.com/@musmanrafique/videos" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+                            </ul>
+							
 							<a href="#work" class="button large scrolly">Learn about what I do</a>
 						</div>
 					</div>
@@ -205,39 +223,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<!-- <script src="assets/js/custom.js"></script> -->
 
 	</body>
-	<script>
-
-function includeHTML() {
-	console.log("hello world");
-  var z, i, elmnt, file, xhttp;
-  /* Loop through a collection of all HTML elements: */
-  z = document.getElementsByTagName("*");
-  for (i = 0; i < z.length; i++) {
-    elmnt = z[i];
-    /*search for elements with a certain atrribute:*/
-    file = elmnt.getAttribute("w3-include-html");
-    if (file) {
-      /* Make an HTTP request using the attribute value as the file name: */
-      xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4) {
-          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-          /* Remove the attribute, and call this function once more: */
-          elmnt.removeAttribute("w3-include-html");
-          includeHTML();
-        }
-      }
-      xhttp.open("GET", file, true);
-      xhttp.send();
-      /* Exit the function: */
-      return;
-    }
-  }
-}
-		includeHTML();
-	</script>
 </html>
