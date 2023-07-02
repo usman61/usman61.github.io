@@ -17,3 +17,9 @@ ul.social li a:before{
 .mar-bot-m{
     margin-bottom: 1.3em !important;  
   }
+  .size-adjust{
+    height: 490px;
+  }
+  .size-adjust img{
+    object-fit: contain;
+  }
